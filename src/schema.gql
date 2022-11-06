@@ -9,6 +9,15 @@ type Query {
   """Retorna número Random"""
   random: Float!
 
-  """Retorna número  entre x & y"""
+  """Retorna número  entre cero & y"""
   randomFromZeroTo: Int!
+
+  """Retorna número  entre cero(No excluyente) hasta arg(TO)"""
+  randomFromZeroToArg(to: Float!): Int!
+
+  """Retorna número  entre min (incluido) a max (excluido)"""
+  randomFromMinAndMax(min: Float!, max: Float!): Int!
+
+  """Retorna número  entre min  a max (excluido ambos)"""
+  randomFromMinAndMaxExclude(min: Float!, max: Float!): Int!
 }
