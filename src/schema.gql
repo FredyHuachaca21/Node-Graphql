@@ -3,5 +3,9 @@
 # ------------------------------------------------------
 
 type Query {
-  HelloWorld: String!
+  """Retorna un string de Hola Mundo"""
+  Hello: String!
+
+  """Retorna número Random"""
+  random: Float!
 }
