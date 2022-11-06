@@ -29,11 +29,11 @@ export class HelloWorldResolver {
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min) + min);
     }
-    @Query(()=> Int, {description: 'Retorna número  entre min  a max (excluido ambos)', name: 'randomFromMinAndMaxExclude'})
+    @Query(()=> Int, {description: 'Retorna número  entre min  a max (incluyendo ambos)', name: 'randomFromMinAndMaxExclude'})
     getRandomFromArgtoArgExclude(@Args('min') min: number, @Args('max') max: number,): number{
         min = Math.ceil(min);
         max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min) + min);
+        return Math.floor(Math.random() * (max - min + 1) + min);
     }
 
 }

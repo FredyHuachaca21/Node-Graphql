@@ -18,6 +18,6 @@ type Query {
   """Retorna número  entre min (incluido) a max (excluido)"""
   randomFromMinAndMax(min: Float!, max: Float!): Int!
 
-  """Retorna número  entre min  a max (excluido ambos)"""
+  """Retorna número  entre min  a max (incluyendo ambos)"""
   randomFromMinAndMaxExclude(min: Float!, max: Float!): Int!
 }
