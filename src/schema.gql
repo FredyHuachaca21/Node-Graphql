@@ -8,4 +8,7 @@ type Query {
 
   """Retorna número Random"""
   random: Float!
+
+  """Retorna número  entre x & y"""
+  randomFromZeroTo: Int!
 }
