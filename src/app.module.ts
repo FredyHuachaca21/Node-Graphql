@@ -7,6 +7,8 @@ import { HelloWorldModule } from './hello-world/hello-world.module';
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
+      //debug: false,
+      //playground: false,
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
     }),
     HelloWorldModule,
